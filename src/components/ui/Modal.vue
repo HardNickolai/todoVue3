@@ -11,7 +11,11 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <Modal :open="props.open" @update:open="emit('update:open', $event)" title="Пример">
+  <Modal
+    :open="props.open"
+    @update:open="emit('update:open', $event)"
+    title="Пример"
+  >
     <slot />
   </Modal>
 </template>

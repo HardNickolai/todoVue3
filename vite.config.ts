@@ -10,6 +10,7 @@ export default defineConfig({
       "views": path.resolve(__dirname, "src/views"),
       "components": path.resolve(__dirname, "src/components"),
       "ui": path.resolve(__dirname, "src/components/ui"),
+      "modal": path.resolve(__dirname, "src/components/modal"),
     },
   },
 });
