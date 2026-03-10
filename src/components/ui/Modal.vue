@@ -8,11 +8,10 @@ const props = defineProps<{
 const emit = defineEmits<{
   (e: "update:open", value: boolean): void;
 }>();
-
 </script>
 
 <template>
-  <Modal :open="props.open" @update:open="emit('update:open', $event)">
-    <slot/>  
+  <Modal :open="props.open" @update:open="emit('update:open', $event)" title="Пример">
+    <slot />
   </Modal>
 </template>
