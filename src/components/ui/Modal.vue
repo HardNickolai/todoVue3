@@ -3,6 +3,7 @@ import { Modal } from "ant-design-vue";
 
 const props = defineProps<{
   open: boolean;
+  title: string;
 }>();
 
 const emit = defineEmits<{
@@ -14,8 +15,12 @@ const emit = defineEmits<{
   <Modal
     :open="props.open"
     @update:open="emit('update:open', $event)"
-    title="Пример"
+    :title="props.title"
   >
     <slot />
+
+    <template #footer>
+      <slot name="footer" />
+    </template>
   </Modal>
 </template>
